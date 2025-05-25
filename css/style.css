@@ -8,7 +8,9 @@
 /* Blocks */
 
 @import "blocks/header.css";
+@import "blocks/form.css";
 @import "blocks/catalog-list.css";
 @import "blocks/catalog-card.css";
 @import "blocks/parameter-card.css";
+
 
