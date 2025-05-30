@@ -64,10 +64,51 @@
       <div class="catalog__inner">
         <!-- Форма фильтрации -->
         <form action="#" class="form" method="post">
-          <span class="form__counter">
+          <div class="fom__top">
+              <span class="form__counter">
             Показано 6 из 9
           </span>
-          
+              <button class="form__reset-btn">
+                <span class="form__reset-btn-text">
+                  сбросить
+                </span>
+                <svg width="13" heigth="13" class="form__reset-btn-icon">
+                  <use xlink:href="images/sprite.svg#icon-button-close"></use>
+                </svg>
+              </button>
+          </div>
+          <fieldset class="form__group">
+            <legend class="form__group-name">
+              Валюта
+            </legend>
+            <div class="form__inner">
+              <div class="custom-radio">
+                <input class="custom-radio" id="radio-rub" value="rub" type="radio" name="currency" checked>
+                <label class="custom-radio__label" for="radio-rub">
+                  <span class="custom-radio__name">
+                    ₽
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio" id="radio-usd" value="usd" type="radio" name="currency" >
+                <label class="custom-radio__label" for="radio-usd">
+                  <span class="custom-radio__name">
+                    $
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio" id="radio-euro" value="euro" type="radio" name="currency" >
+                <label class="custom-radio__label" for="radio-euro">
+                  <span class="custom-radio__name">
+                    €
+                  </span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
         </form>
         <!-- Список с карточками -->
         <ul class="catalog-list">
