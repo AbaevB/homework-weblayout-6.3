@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <title>Выбор квартир - Обыденский №1</title>
 </head>
 
 <body>
   <header class="header">
     <div class="container header__container">
-      <button class="header__menu" type="button" aria-label="Главное меню">
-        <svg  class="header__menu-icon" width="44" height="10">
+      <button class="header__menu" aria-label="Главное меню" type="button">
+        <svg class="header__menu-icon" width="44" height="10">
           <use xlink:href="images/sprite.svg#icon-menu"></use>
         </svg>
 
@@ -39,7 +39,7 @@
     </div>
     <div class="header__choice">
         <button class="header__choice-button" type="button">
-          <svg  class="header__choice-icon" width="22" height="18">
+          <svg class="header__choice-icon" width="22" height="18">
             <use xlink:href="images/sprite.svg#icon-building"></use>
           </svg>
           <span class="header__choice-text">
@@ -47,7 +47,7 @@
           </span>
         </button>
         <button class="header__choice-button" type="button">
-          <svg  class="header__choice-icon" width="22" height="18">
+          <svg class="header__choice-icon" width="22" height="18">
             <use xlink:href="images/sprite.svg#icon-filter"></use>
           </svg>
           <span class="header__choice-text">
@@ -63,7 +63,7 @@
       <h1 class="visually-hidden">Подбор квартиры по параметрам</h1>
       <div class="catalog__inner">
         <!-- Форма фильтрации -->
-        <form action="#" class="form" method="post">
+        <form class="form" action="#" method="post">
           <div class="fom__top">
               <span class="form__counter">
             Показано 6 из 9
@@ -72,7 +72,7 @@
                 <span class="form__reset-btn-text">
                   сбросить
                 </span>
-                <svg width="13" heigth="13" class="form__reset-btn-icon">
+                <svg class="form__reset-btn-icon" width="13" heigth="13">
                   <use xlink:href="images/sprite.svg#icon-button-close"></use>
                 </svg>
               </button>
@@ -85,30 +85,100 @@
               <div class="custom-radio">
                 <input class="custom-radio" id="radio-rub" value="rub" type="radio" name="currency" checked>
                 <label class="custom-radio__label" for="radio-rub">
-                  <span class="custom-radio__name">
+                  <span class="custom-radio__text">
                     ₽
                   </span>
                 </label>
               </div>
               <div class="custom-radio">
-                <input class="custom-radio" id="radio-usd" value="usd" type="radio" name="currency" >
+                <input class="custom-radio" id="radio-usd" value="usd" type="radio" name="currency">
                 <label class="custom-radio__label" for="radio-usd">
-                  <span class="custom-radio__name">
+                  <span class="custom-radio__text">
                     $
                   </span>
                 </label>
               </div>
               <div class="custom-radio">
-                <input class="custom-radio" id="radio-euro" value="euro" type="radio" name="currency" >
+                <input class="custom-radio" id="radio-euro" value="euro" type="radio" name="currency">
                 <label class="custom-radio__label" for="radio-euro">
-                  <span class="custom-radio__name">
+                  <span class="custom-radio__text">
                     €
                   </span>
                 </label>
               </div>
             </div>
           </fieldset>
-
+          <fieldset class="form__group">
+             <legend class="visually-hidden">
+                Скрыть забронированные
+            </legend>
+            <div class="form__inner">
+                <div class="custom-checkbox">
+                  <input id="hide-booked" type="checkbox" name="hide-booked">
+                </div>
+            <label class="custom-checkbox__label" for="hide-booked">
+              <span class="custom-checkbox__text">
+                Скрыть забронированные
+              </span>
+            </label>
+            </div>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__group-name">
+              Номер квартиры
+            </legend>
+            <div class="custom-input">
+              <input type="text" name="apartment-number" id="apartment-number" placeholder="Введите номер">
+              
+            </div>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__group-name">
+              Количество спален
+            </legend>
+            <div class="form__inner">
+              <div class="custom-radio">
+                <input type="radio" name="bedrooms" id="bedrooms-1">
+                <label for="bedrooms-1" class="custom-radio__label">
+                  <span class="custom-radio__text">
+                    1
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input type="radio" name="bedrooms" id="bedrooms-2">
+                <label for="bedrooms-2" class="custom-radio__label">
+                  <span class="custom-radio__text">
+                    2
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input type="radio" name="bedrooms" id="bedrooms-3" checked>
+                <label for="bedrooms-3" class="custom-radio__label">
+                  <span class="custom-radio__text">
+                    3
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input type="radio" name="bedrooms" id="bedrooms-4">
+                <label for="bedrooms-4" class="custom-radio__label">
+                  <span class="custom-radio__text">
+                    4
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input type="radio" name="bedrooms" id="bedrooms-5">
+                <label for="bedrooms-5" class="custom-radio__label">
+                  <span class="custom-radio__text">
+                    5
+                  </span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
         </form>
         <!-- Список с карточками -->
         <ul class="catalog-list">
@@ -150,8 +220,8 @@
                   </div>
                 </div>
               </a>
-              <button class="catalog-card__btn-like" type="button" aria-label="Добавить в избранное">
-                <svg class="catalog-card__like-icon" width="24" height="22" aria-hidden="true">
+              <button class="catalog-card__btn-like" aria-label="Добавить в избранное" type="button">
+                <svg class="catalog-card__like-icon" aria-hidden="true" width="24" height="22">
                   <use xlink:href="images/sprite.svg#icon-like"></use>
                 </svg>
               </button>
@@ -196,8 +266,8 @@
                   </div>
                 </div>
               </a>
-              <button class="catalog-card__btn-like" type="button" aria-label="Добавить в избранное">
-                <svg class="catalog-card__like-icon" width="24" height="22" aria-hidden="true">
+              <button class="catalog-card__btn-like" aria-label="Добавить в избранное" type="button">
+                <svg class="catalog-card__like-icon" aria-hidden="true" width="24" height="22">
                   <use xlink:href="images/sprite.svg#icon-like"></use>
                 </svg>
               </button>
@@ -242,8 +312,8 @@
                   </div>
                 </div>
               </a>
-              <button class="catalog-card__btn-like" type="button" aria-label="Добавить в избранное">
-                <svg class="catalog-card__like-icon" width="24" height="22" aria-hidden="true">
+              <button class="catalog-card__btn-like" aria-label="Добавить в избранное" type="button">
+                <svg class="catalog-card__like-icon" aria-hidden="true" width="24" height="22">
                   <use xlink:href="images/sprite.svg#icon-like"></use>
                 </svg>
               </button>
@@ -288,8 +358,8 @@
                   </div>
                 </div>
               </a>
-              <button class="catalog-card__btn-like" type="button" aria-label="Добавить в избранное">
-                <svg class="catalog-card__like-icon" width="24" height="22" aria-hidden="true">
+              <button class="catalog-card__btn-like" aria-label="Добавить в избранное" type="button">
+                <svg class="catalog-card__like-icon" aria-hidden="true" width="24" height="22">
                   <use xlink:href="images/sprite.svg#icon-like"></use>
                 </svg>
               </button>
@@ -334,8 +404,8 @@
                   </div>
                 </div>
               </a>
-              <button class="catalog-card__btn-like" type="button" aria-label="Добавить в избранное">
-                <svg class="catalog-card__like-icon" width="24" height="22" aria-hidden="true">
+              <button class="catalog-card__btn-like" aria-label="Добавить в избранное" type="button">
+                <svg class="catalog-card__like-icon" aria-hidden="true" width="24" height="22">
                   <use xlink:href="images/sprite.svg#icon-like"></use>
                 </svg>
               </button>
@@ -380,8 +450,8 @@
                   </div>
                 </div>
               </a>
-              <button class="catalog-card__btn-like" type="button" aria-label="Добавить в избранное">
-                <svg class="catalog-card__like-icon" width="24" height="22" aria-hidden="true">
+              <button class="catalog-card__btn-like" aria-label="Добавить в избранное" type="button">
+                <svg class="catalog-card__like-icon" aria-hidden="true" width="24" height="22">
                   <use xlink:href="images/sprite.svg#icon-like"></use>
                 </svg>
               </button>
