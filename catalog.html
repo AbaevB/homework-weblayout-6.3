@@ -63,16 +63,16 @@
       <h1 class="visually-hidden">Подбор квартиры по параметрам</h1>
       <div class="catalog__inner">
         <!-- Форма фильтрации -->
-        <form class="form" action="#" method="post">
+        <form class="form" action="https://jsonplaceholder.typicode.com/posts" method="post">
           <div class="fom__top">
               <span class="form__counter">
             Показано 6 из 9
           </span>
-              <button type="reset" class="form__reset-btn">
+              <button class="form__reset-btn" type="reset">
                 <span class="form__reset-btn-text">
                   сбросить
                 </span>
-                <svg class="form__reset-btn-icon"  width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="form__reset-btn-icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="images/sprite.svg#icon-button-close"></use>
                 </svg>
               </button>
@@ -114,7 +114,7 @@
             </legend>
             <div class="form__inner">
                 <div class="custom-checkbox">
-                  <input class="custom-checkbox__field visually-hidden" id="hide-booked" type="checkbox" name="hide-booked">
+                  <input class="custom-checkbox__field visually-hidden" id="hide-booked" type="checkbox" name="hide-booked" value="hide booked">
                 </div>
             <label class="custom-checkbox__label" for="hide-booked">
               <span class="custom-checkbox__text">
@@ -127,10 +127,12 @@
             <legend class="form__group-name">
               Номер квартиры
             </legend>
-            <div class="custom-input">
-              <input class="custom-input__field" type="text" name="apartment-number" id="apartment-number" placeholder="Введите номер">
-              
+            <div class="form__inner">
+              <div class="custom-input">
+                  <input class="custom-input__field" id="apartment-number" type="text" name="apartment-number" placeholder="Введите номер">
+              </div>
             </div>
+            
           </fieldset>
           <fieldset class="form__group">
             <legend class="form__group-name">
@@ -138,40 +140,40 @@
             </legend>
             <div class="form__inner form__inner_bedrooms">
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="bedrooms" id="bedrooms-1">
-                <label for="bedrooms-1" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="bedrooms-1" type="radio" name="bedrooms" value="1 bedroom">
+                <label class="custom-radio__label" for="bedrooms-1">
                   <span class="custom-radio__text">
                     1
                   </span>
                 </label>
               </div>
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="bedrooms" id="bedrooms-2">
-                <label for="bedrooms-2" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="bedrooms-2" type="radio" name="bedrooms" value="2 bedrooms">
+                <label class="custom-radio__label" for="bedrooms-2">
                   <span class="custom-radio__text">
                     2
                   </span>
                 </label>
               </div>
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="bedrooms" id="bedrooms-3" checked>
-                <label for="bedrooms-3" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="bedrooms-3" type="radio" name="bedrooms" value="3 bedrooms" checked>
+                <label class="custom-radio__label" for="bedrooms-3">
                   <span class="custom-radio__text">
                     3
                   </span>
                 </label>
               </div>
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="bedrooms" id="bedrooms-4">
-                <label for="bedrooms-4" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="bedrooms-4" type="radio" name="bedrooms" value="4 bedrooms">
+                <label class="custom-radio__label" for="bedrooms-4">
                   <span class="custom-radio__text">
                     4
                   </span>
                 </label>
               </div>
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="bedrooms" id="bedrooms-5">
-                <label for="bedrooms-5" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="bedrooms-5" type="radio" name="bedrooms" value="5 bedrooms">
+                <label class="custom-radio__label" for="bedrooms-5">
                   <span class="custom-radio__text">
                     5
                   </span>
@@ -185,24 +187,24 @@
             </legend>
             <div class="form__inner form__inner_type">
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="type" id="apartment" checked>
-                <label for="apartment" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="apartment" type="radio" name="type" value="apartment" checked>
+                <label class="custom-radio__label" for="apartment">
                   <span class="custom-radio__text">
                     Квартира
                   </span>
                 </label>
               </div>
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="type" id="penthouse">
-                <label for="penthouse" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="penthouse" type="radio" name="type" value="penthouse">
+                <label class="custom-radio__label" for="penthouse">
                   <span class="custom-radio__text">
                     Пентхаус
                   </span>
                 </label>
               </div>
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="type" id="villa">
-                <label for="villa" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="villa" type="radio" name="type" value="villa">
+                <label class="custom-radio__label" for="villa">
                   <span class="custom-radio__text">
                     Вилла
                   </span>
@@ -216,32 +218,32 @@
             </legend>
             <div class="form__inner form__inner_size">
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="size" id="s">
-                <label for="s" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="s" type="radio" name="size" value="s">
+                <label class="custom-radio__label" for="s">
                   <span class="custom-radio__text">
                     S
                   </span>
                 </label>
               </div>
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="size" id="m" checked>
-                <label for="m" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="m" type="radio" name="size" value="m" checked>
+                <label class="custom-radio__label" for="m">
                   <span class="custom-radio__text">
                     M
                   </span>
                 </label>
               </div>
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="size" id="l">
-                <label for="l" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="l" type="radio" name="size" value="l">
+                <label class="custom-radio__label" for="l">
                   <span class="custom-radio__text">
                     L
                   </span>
                 </label>
               </div>
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="size" id="xl">
-                <label for="xl" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="xl" type="radio" name="size" value="xl">
+                <label class="custom-radio__label" for="xl">
                   <span class="custom-radio__text">
                     XL
                   </span>
@@ -255,32 +257,32 @@
             </legend>
             <div class="form__inner form__inner_floor">
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="floor" id="floor-1">
-                <label for="floor-1" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="floor-1" type="radio" name="floor" value="floor 1">
+                <label class="custom-radio__label" for="floor-1">
                   <span class="custom-radio__text">
                     1
                   </span>
                 </label>
               </div>
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="floor" id="floor-2">
-                <label for="floor-2" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="floor-2" type="radio" name="floor" value="floor 2">
+                <label class="custom-radio__label" for="floor-2">
                   <span class="custom-radio__text">
                     2
                   </span>
                 </label>
               </div>
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="floor" id="floor-3">
-                <label for="floor-3" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="floor-3" type="radio" name="floor" value="floor 3">
+                <label class="custom-radio__label" for="floor-3">
                   <span class="custom-radio__text">
                     3
                   </span>
                 </label>
               </div>
               <div class="custom-radio">
-                <input class="custom-radio__field visually-hidden" type="radio" name="floor" id="floor-4">
-                <label for="floor-4" class="custom-radio__label">
+                <input class="custom-radio__field visually-hidden" id="floor-4" type="radio" name="floor" value="floor 4">
+                <label class="custom-radio__label" for="floor-4">
                   <span class="custom-radio__text">
                     4
                   </span>
@@ -294,7 +296,7 @@
             </legend>
             <div class="form__inner form__inner_adv">
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="fireplace" id="fireplace">
+                <input class="custom-checkbox__field visually-hidden" id="fireplace" type="checkbox" name="fireplace" value="fireplace">
                 <label class="custom-checkbox__label" for="fireplace">
                   <span class="custom-checkbox__text">
                     Камин
@@ -302,7 +304,7 @@
                 </label>
               </div>
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="two-story" id="two-story" disabled>
+                <input class="custom-checkbox__field visually-hidden" id="two-story" type="checkbox" name="two-story" value="two story" disabled>
                 <label class="custom-checkbox__label" for="two-story">
                   <span class="custom-checkbox__text">
                     Двухэтажная
@@ -310,7 +312,7 @@
                 </label>
               </div>
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="pool" id="pool">
+                <input class="custom-checkbox__field visually-hidden" id="pool" type="checkbox" name="pool" value="pool">
                 <label class="custom-checkbox__label" for="pool">
                   <span class="custom-checkbox__text">
                     Бассейн
@@ -318,7 +320,7 @@
                 </label>
               </div>
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="three-story" id="three-story">
+                <input class="custom-checkbox__field visually-hidden" id="three-story" type="checkbox" name="three-story" value="three story">
                 <label class="custom-checkbox__label" for="three-story">
                   <span class="custom-checkbox__text">
                     Трехэтажная
@@ -326,7 +328,7 @@
                 </label>
               </div>
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="terrace" id="terrace">
+                <input class="custom-checkbox__field visually-hidden" id="terrace" type="checkbox" name="terrace" value="terrace">
                 <label class="custom-checkbox__label" for="terrace">
                   <span class="custom-checkbox__text">
                     Терраса
@@ -341,7 +343,7 @@
             </legend>
             <div class="form__inner form__inner_balconies">
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="loggia" id="loggia">
+                <input class="custom-checkbox__field visually-hidden" id="loggia" type="checkbox" name="loggia" value="loggia">
                 <label class="custom-checkbox__label" for="loggia">
                   <span class="custom-checkbox__text">
                     Лоджия
@@ -349,7 +351,7 @@
                 </label>
               </div>
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="balcony" id="balcony">
+                <input class="custom-checkbox__field visually-hidden" id="balcony" type="checkbox" name="balcony" value="balcony">
                 <label class="custom-checkbox__label" for="balcony">
                   <span class="custom-checkbox__text">
                     Балкон
@@ -357,7 +359,7 @@
                 </label>
               </div>
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="no-balcony" id="no-balcony">
+                <input class="custom-checkbox__field visually-hidden" id="no-balcony" type="checkbox" name="no-balcony" value="no balcony">
                 <label class="custom-checkbox__label" for="no-balcony">
                   <span class="custom-checkbox__text">
                     Нет балкона
@@ -372,7 +374,7 @@
             </legend>
             <div class="form__inner form__inner_plan">
               <div class="custom__checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="linear" id="linear">
+                <input class="custom-checkbox__field visually-hidden" id="linear" type="checkbox" name="linear" value="linear">
                 <label class="custom-checkbox__label" for="linear">
                   <span class="custom-checkbox__text">
                    Линейная
@@ -380,7 +382,7 @@
                 </label>
               </div>
               <div class="custom__checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="swing" id="swing">
+                <input class="custom-checkbox__field visually-hidden" id="swing" type="checkbox" name="swing" value="swing">
                 <label class="custom-checkbox__label" for="swing">
                   <span class="custom-checkbox__text">
                    Распашная
@@ -395,7 +397,7 @@
             </legend>
             <div class="form__inner form__inner_orientation">
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="north-east" id="north-east" disabled>
+                <input class="custom-checkbox__field visually-hidden" id="north-east" type="checkbox" name="north-east" value="north-east" disabled>
                 <label class="custom-checkbox__label" for="north-east">
                   <span class="custom-checkbox__text">
                    Северо-восток
@@ -403,7 +405,7 @@
                 </label>
               </div>
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="east" id="east">
+                <input class="custom-checkbox__field visually-hidden" id="east" type="checkbox" name="east" value="east">
                 <label class="custom-checkbox__label" for="east">
                   <span class="custom-checkbox__text">
                    Восток
@@ -411,7 +413,7 @@
                 </label>
               </div>
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="south-east" id="south-east">
+                <input class="custom-checkbox__field visually-hidden" id="south-east" type="checkbox" name="south-east" value="south-east">
                 <label class="custom-checkbox__label" for="south-east">
                   <span class="custom-checkbox__text">
                    Юго-восток
@@ -419,7 +421,7 @@
                 </label>
               </div>
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="south" id="south">
+                <input class="custom-checkbox__field visually-hidden" id="south" type="checkbox" name="south" value="south">
                 <label class="custom-checkbox__label" for="south">
                   <span class="custom-checkbox__text">
                    Юг
@@ -427,7 +429,7 @@
                 </label>
               </div>
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="south-west" id="south-west">
+                <input class="custom-checkbox__field visually-hidden" id="south-west" type="checkbox" name="south-west" value="south-west">
                 <label class="custom-checkbox__label" for="south-west">
                   <span class="custom-checkbox__text">
                    Юго-запад
@@ -435,7 +437,7 @@
                 </label>
               </div>
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="west" id="west" disabled>
+                <input class="custom-checkbox__field visually-hidden" id="west" type="checkbox" name="west" value="west" disabled>
                 <label class="custom-checkbox__label" for="west">
                   <span class="custom-checkbox__text">
                    Запад
@@ -443,7 +445,7 @@
                 </label>
               </div>
               <div class="custom-checkbox">
-                <input class="custom-checkbox__field visually-hidden" type="checkbox" name="north-west" id="north-west">
+                <input class="custom-checkbox__field visually-hidden" id="north-west" type="checkbox" name="north-west" value="north-west">
                 <label class="custom-checkbox__label" for="north-west">
                   <span class="custom-checkbox__text">
                    Северо-запад
