@@ -37,12 +37,14 @@
 }
 
 .form__group  {
+  margin-bottom: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
 .form__group-name {
+  margin-bottom: 16px;
   font-weight: 300;
 font-size: 12px;
 line-height: 14px;
@@ -80,16 +82,53 @@ color: #090909;
 
 .form__inner_adv  {
   grid-template-columns: repeat(2, 1fr);
+  row-gap: 16px;
 }
 
 .form__inner_balconies {
   grid-template-columns: repeat(2, 1fr);
+  row-gap: 16px;
 }
 
 .form__inner_plan {
   grid-template-columns: repeat(2, 1fr);
+  row-gap: 16px;
 }
 
 .form__inner_orientation  {
   grid-template-columns: repeat(2, 1fr);
+  row-gap: 16px;
+}
+
+.form__btn  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background-color: transparent;
+  border: 1px solid #AD8361;
+  border-radius: 60px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #AD8361;
+  cursor: pointer;
+
+}
+
+.form__btn:hover {
+  background-color: #AD8361;
+  color: #FFF;
+}
+
+.form__btn:focus {
+  background-color: #AD8361;
+  color: #FFF;
+}
+
+.form__btn:disabled {
+  border-color: rgba(173, 131, 97, 0.5);
+  color: rgba(173, 131, 97, 0.5);
+  pointer-events: none;
 }
