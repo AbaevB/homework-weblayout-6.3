@@ -10,6 +10,9 @@
 @import "blocks/header.css";
 @import "blocks/form.css";
 @import "blocks/catalog.css";
+@import "blocks/cusom-input.css";
+@import "blocks/custom-radio.css";
+@import "blocks/custom-checkbox.css";
 @import "blocks/catalog-list.css";
 @import "blocks/catalog-card.css";
 @import "blocks/parameter-card.css";
