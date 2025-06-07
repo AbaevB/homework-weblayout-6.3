@@ -1,0 +1,39 @@
+.custom-radio {
+    position: relative;
+    width: 100%;
+}
+
+.custom-radio__field:checked + .custom-radio__label {
+    background-color: #AD8361;
+    color: #FFF;
+}
+
+.custom-radio__label {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #AD8361;
+    color: #AD8361;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+
+.custom-radio__text {
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 14px;
+   color: inherit; 
+}
+
+.custom-radio__label:hover  {
+    color: #090909;
+}
+
+.custom-checkbox__label:focus   {
+   background-color: #EFEDE7; 
+   color: #AD8361;
+}

@@ -1,0 +1,12 @@
+.catalog {
+    padding-top: 20px;
+    padding-bottom: 51px;
+} 
+
+.catalog__inner {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    gap: 58px;
+    width: 100%;
+}
+

@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <title>Выбор квартир - Обыденский №1</title>
 </head>
 
 <body>
   <header class="header">
     <div class="container header__container">
-      <button class="header__menu" type="button" aria-label="Главное меню">
-        <svg  class="header__menu-icon" width="44" height="10">
+      <button class="header__menu" aria-label="Главное меню" type="button">
+        <svg class="header__menu-icon" width="44" height="10" aria-hidden="true">
           <use xlink:href="images/sprite.svg#icon-menu"></use>
         </svg>
 
@@ -25,7 +25,7 @@
           En
         </button>
         <div class="header__counter">
-          <svg class="header__counter-icon" width="22" height="20">
+          <svg class="header__counter-icon" width="22" height="20" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-favorite"></use>
           </svg>
           <span class="header__counter-text">
@@ -39,7 +39,7 @@
     </div>
     <div class="header__choice">
         <button class="header__choice-button" type="button">
-          <svg  class="header__choice-icon" width="22" height="18">
+          <svg class="header__choice-icon" width="22" height="18" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-building"></use>
           </svg>
           <span class="header__choice-text">
@@ -47,7 +47,7 @@
           </span>
         </button>
         <button class="header__choice-button" type="button">
-          <svg  class="header__choice-icon" width="22" height="18">
+          <svg class="header__choice-icon" width="22" height="18" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-filter"></use>
           </svg>
           <span class="header__choice-text">
@@ -63,7 +63,411 @@
       <h1 class="visually-hidden">Подбор квартиры по параметрам</h1>
       <div class="catalog__inner">
         <!-- Форма фильтрации -->
-
+        <form class="form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+          <div class="fom__top">
+              <span class="form__counter">
+            Показано 6 из 9
+          </span>
+              <button class="form__reset-btn" type="reset">
+                <span class="form__reset-btn-text">
+                  сбросить
+                </span>
+                <svg class="form__reset-btn-icon" width="13" height="13" aria-hidden="true">
+                  <use xlink:href="images/sprite.svg#icon-button-close"></use>
+                </svg>
+              </button>
+          </div>
+          <fieldset class="form__group">
+            <legend class="form__group-name">
+              Валюта
+            </legend>
+            <div class="form__inner form__inner_currency">
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="radio-rub" value="rub" type="radio" name="currency" checked>
+                <label class="custom-radio__label" for="radio-rub">
+                  <span class="custom-radio__text">
+                    ₽
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="radio-usd" value="usd" type="radio" name="currency">
+                <label class="custom-radio__label" for="radio-usd">
+                  <span class="custom-radio__text">
+                    $
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="radio-euro" value="euro" type="radio" name="currency">
+                <label class="custom-radio__label" for="radio-euro">
+                  <span class="custom-radio__text">
+                    €
+                  </span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__group">
+             <legend class="visually-hidden">
+                Скрыть забронированные
+            </legend>
+            <div class="form__inner">
+                <div class="custom-checkbox">
+                  <input class="custom-checkbox__field visually-hidden" id="hide" type="checkbox" name="hide-booked" value="hide booked">
+                  <label class="custom-checkbox__label" for="hide">
+                    <span class="custom-checkbox__text">
+                      Скрыть забронированные
+                    </span>
+                  </label>
+                </div>
+            
+            </div>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__group-name">
+              Номер квартиры
+            </legend>
+            <div class="form__inner">
+              <div class="custom-input">
+                  <input class="custom-input__field" id="apartment-number" type="text" name="apartment-number" placeholder="Введите номер">
+                  <svg class="custom-input__icon" width="20" height="20" aria-hidden="true">
+                      <use xlink:href="images/sprite.svg#icon-key"></use>
+                  </svg>
+              </div>
+            
+            </div>
+            
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__group-name">
+              Количество спален
+            </legend>
+            <div class="form__inner form__inner_bedrooms">
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="bedrooms-1" type="radio" name="bedrooms" value="1 bedroom">
+                <label class="custom-radio__label" for="bedrooms-1">
+                  <span class="custom-radio__text">
+                    1
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="bedrooms-2" type="radio" name="bedrooms" value="2 bedrooms">
+                <label class="custom-radio__label" for="bedrooms-2">
+                  <span class="custom-radio__text">
+                    2
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="bedrooms-3" type="radio" name="bedrooms" value="3 bedrooms" checked>
+                <label class="custom-radio__label" for="bedrooms-3">
+                  <span class="custom-radio__text">
+                    3
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="bedrooms-4" type="radio" name="bedrooms" value="4 bedrooms">
+                <label class="custom-radio__label" for="bedrooms-4">
+                  <span class="custom-radio__text">
+                    4
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="bedrooms-5" type="radio" name="bedrooms" value="5 bedrooms">
+                <label class="custom-radio__label" for="bedrooms-5">
+                  <span class="custom-radio__text">
+                    5
+                  </span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__group-name">
+              Тип
+            </legend>
+            <div class="form__inner form__inner_type">
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="apartment" type="radio" name="type" value="apartment" checked>
+                <label class="custom-radio__label" for="apartment">
+                  <span class="custom-radio__text">
+                    Квартира
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="penthouse" type="radio" name="type" value="penthouse">
+                <label class="custom-radio__label" for="penthouse">
+                  <span class="custom-radio__text">
+                    Пентхаус
+                  </span>
+                </label>
+               
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="villa" type="radio" name="type" value="villa">
+                <label class="custom-radio__label" for="villa">
+                  <span class="custom-radio__text">
+                    Вилла
+                  </span>
+                </label>
+              </div>
+              <a href="#" class="form__inner-clue">
+                Показать 4 квартиры
+              </a>
+            </div>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__group-name">
+              Размер
+            </legend>
+            <div class="form__inner form__inner_size">
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="s" type="radio" name="size" value="s">
+                <label class="custom-radio__label" for="s">
+                  <span class="custom-radio__text">
+                    S
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="m" type="radio" name="size" value="m" checked>
+                <label class="custom-radio__label" for="m">
+                  <span class="custom-radio__text">
+                    M
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="l" type="radio" name="size" value="l">
+                <label class="custom-radio__label" for="l">
+                  <span class="custom-radio__text">
+                    L
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="xl" type="radio" name="size" value="xl">
+                <label class="custom-radio__label" for="xl">
+                  <span class="custom-radio__text">
+                    XL
+                  </span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__group-name">
+              Этаж
+            </legend>
+            <div class="form__inner form__inner_floor">
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="floor-1" type="radio" name="floor" value="floor 1">
+                <label class="custom-radio__label" for="floor-1">
+                  <span class="custom-radio__text">
+                    1
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="floor-2" type="radio" name="floor" value="floor 2">
+                <label class="custom-radio__label" for="floor-2">
+                  <span class="custom-radio__text">
+                    2
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="floor-3" type="radio" name="floor" value="floor 3">
+                <label class="custom-radio__label" for="floor-3">
+                  <span class="custom-radio__text">
+                    3
+                  </span>
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" id="floor-4" type="radio" name="floor" value="floor 4">
+                <label class="custom-radio__label" for="floor-4">
+                  <span class="custom-radio__text">
+                    4
+                  </span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__group-name">
+              Преимущества
+            </legend>
+            <div class="form__inner form__inner_adv">
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="fireplace" type="checkbox" name="advantage" value="fireplace">
+                <label class="custom-checkbox__label" for="fireplace">
+                  <span class="custom-checkbox__text">
+                    Камин
+                  </span>
+                </label>
+              </div>
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="two-story" type="checkbox" name="advantage" value="two story" disabled>
+                <label class="custom-checkbox__label" for="two-story">
+                  <span class="custom-checkbox__text">
+                    Двухэтажная
+                  </span>
+                </label>
+              </div>
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="pool" type="checkbox" name="advantage" value="pool">
+                <label class="custom-checkbox__label" for="pool">
+                  <span class="custom-checkbox__text">
+                    Бассейн
+                  </span>
+                </label>
+              </div>
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="three-story" type="checkbox" name="advantage" value="three story">
+                <label class="custom-checkbox__label" for="three-story">
+                  <span class="custom-checkbox__text">
+                    Трехэтажная
+                  </span>
+                </label>
+              </div>
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="terrace" type="checkbox" name="advantage" value="terrace">
+                <label class="custom-checkbox__label" for="terrace">
+                  <span class="custom-checkbox__text">
+                    Терраса
+                  </span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__group-name">
+              Балконы
+            </legend>
+            <div class="form__inner form__inner_balconies">
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="loggia" type="checkbox" name="balconies" value="loggia">
+                <label class="custom-checkbox__label" for="loggia">
+                  <span class="custom-checkbox__text">
+                    Лоджия
+                  </span>
+                </label>
+              </div>
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="balcony" type="checkbox" name="balconies" value="balcony">
+                <label class="custom-checkbox__label" for="balcony">
+                  <span class="custom-checkbox__text">
+                    Балкон
+                  </span>
+                </label>
+              </div>
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="no-balcony" type="checkbox" name="balconies" value="no balcony">
+                <label class="custom-checkbox__label" for="no-balcony">
+                  <span class="custom-checkbox__text">
+                    Нет балкона
+                  </span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__group-name">
+              Планировка
+            </legend>
+            <div class="form__inner form__inner_plan">
+              <div class="custom__checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="linear" type="checkbox" name="plan" value="linear">
+                <label class="custom-checkbox__label" for="linear">
+                  <span class="custom-checkbox__text">
+                   Линейная
+                  </span>
+                </label>
+              </div>
+              <div class="custom__checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="swing" type="checkbox" name="plan" value="swing">
+                <label class="custom-checkbox__label" for="swing">
+                  <span class="custom-checkbox__text">
+                   Распашная
+                  </span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="form__group-name">
+              Ориентация по сторонам света
+            </legend>
+            <div class="form__inner form__inner_orientation">
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="north-east" type="checkbox" name="orientation" value="north-east" disabled>
+                <label class="custom-checkbox__label" for="north-east">
+                  <span class="custom-checkbox__text">
+                   Северо-восток
+                  </span>
+                </label>
+              </div>
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="east" type="checkbox" name="orientation" value="east">
+                <label class="custom-checkbox__label" for="east">
+                  <span class="custom-checkbox__text">
+                   Восток
+                  </span>
+                </label>
+              </div>
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="south-east" type="checkbox" name="orientation" value="south-east">
+                <label class="custom-checkbox__label" for="south-east">
+                  <span class="custom-checkbox__text">
+                   Юго-восток
+                  </span>
+                </label>
+              </div>
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="south" type="checkbox" name="orientation" value="south">
+                <label class="custom-checkbox__label" for="south">
+                  <span class="custom-checkbox__text">
+                   Юг
+                  </span>
+                </label>
+              </div>
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="south-west" type="checkbox" name="orientation" value="south-west">
+                <label class="custom-checkbox__label" for="south-west">
+                  <span class="custom-checkbox__text">
+                   Юго-запад
+                  </span>
+                </label>
+              </div>
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="west" type="checkbox" name="orientation" value="west" disabled>
+                <label class="custom-checkbox__label" for="west">
+                  <span class="custom-checkbox__text">
+                   Запад
+                  </span>
+                </label>
+              </div>
+              <div class="custom-checkbox">
+                <input class="custom-checkbox__field visually-hidden" id="north-west" type="checkbox" name="orientation" value="north-west">
+                <label class="custom-checkbox__label" for="north-west">
+                  <span class="custom-checkbox__text">
+                   Северо-запад
+                  </span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <button class="form__btn" type="submit" >
+            Применить фильтр
+          </button>
+        </form>
+        
         <!-- Список с карточками -->
         <ul class="catalog-list">
           <li class="catalog-list__item">
@@ -103,12 +507,20 @@
                     <p class="catalog-card__price-total">236 480 000 ₽</p>
                   </div>
                 </div>
+                <button type="button" class="catalog-card__btn-plus" aria-label="Увеличить">
+                <svg class="catalog-card__btn-plus-icon" width="16" height="16" aria-hidden="true" >
+                  <use xlink:href="images/sprite.svg#icon-plus">
+                  </use>
+                </svg>
+                </button>
               </a>
-              <button class="catalog-card__btn-like" type="button" aria-label="Добавить в избранное">
-                <svg class="catalog-card__like-icon" width="24" height="22" aria-hidden="true">
+              <button class="catalog-card__btn-like" aria-label="Добавить в избранное" type="button">
+                <svg class="catalog-card__like-icon" aria-hidden="true" width="24" height="22">
                   <use xlink:href="images/sprite.svg#icon-like"></use>
                 </svg>
               </button>
+              
+
             </div>
           </li>
 
@@ -149,9 +561,15 @@
                     <p class="catalog-card__price-total">372 350 000 ₽</p>
                   </div>
                 </div>
+                <button type="button" class="catalog-card__btn-plus" aria-label="Увеличить">
+                <svg class="catalog-card__btn-plus-icon" width="16" height="16" aria-hidden="true" >
+                  <use xlink:href="images/sprite.svg#icon-plus">
+                  </use>
+                </svg>
+                </button>
               </a>
-              <button class="catalog-card__btn-like" type="button" aria-label="Добавить в избранное">
-                <svg class="catalog-card__like-icon" width="24" height="22" aria-hidden="true">
+              <button class="catalog-card__btn-like" aria-label="Добавить в избранное" type="button">
+                <svg class="catalog-card__like-icon" aria-hidden="true" width="24" height="22">
                   <use xlink:href="images/sprite.svg#icon-like"></use>
                 </svg>
               </button>
@@ -195,9 +613,15 @@
                     <p class="catalog-card__price-total">601 450 000 ₽</p>
                   </div>
                 </div>
+                <button type="button" class="catalog-card__btn-plus" aria-label="Увеличить">
+                <svg class="catalog-card__btn-plus-icon" width="16" height="16" aria-hidden="true" >
+                  <use xlink:href="images/sprite.svg#icon-plus">
+                  </use>
+                </svg>
+                </button>
               </a>
-              <button class="catalog-card__btn-like" type="button" aria-label="Добавить в избранное">
-                <svg class="catalog-card__like-icon" width="24" height="22" aria-hidden="true">
+              <button class="catalog-card__btn-like" aria-label="Добавить в избранное" type="button">
+                <svg class="catalog-card__like-icon" aria-hidden="true" width="24" height="22">
                   <use xlink:href="images/sprite.svg#icon-like"></use>
                 </svg>
               </button>
@@ -241,9 +665,15 @@
                     <p class="catalog-card__price-total">594 960 000 ₽</p>
                   </div>
                 </div>
+                <button type="button" class="catalog-card__btn-plus" aria-label="Увеличить">
+                <svg class="catalog-card__btn-plus-icon" width="16" height="16" aria-hidden="true" >
+                  <use xlink:href="images/sprite.svg#icon-plus">
+                  </use>
+                </svg>
+                </button>
               </a>
-              <button class="catalog-card__btn-like" type="button" aria-label="Добавить в избранное">
-                <svg class="catalog-card__like-icon" width="24" height="22" aria-hidden="true">
+              <button class="catalog-card__btn-like" aria-label="Добавить в избранное" type="button">
+                <svg class="catalog-card__like-icon" aria-hidden="true" width="24" height="22">
                   <use xlink:href="images/sprite.svg#icon-like"></use>
                 </svg>
               </button>
@@ -287,9 +717,15 @@
                     <p class="catalog-card__price-total">843 440 000 ₽</p>
                   </div>
                 </div>
+                <button type="button" class="catalog-card__btn-plus" aria-label="Увеличить">
+                <svg class="catalog-card__btn-plus-icon" width="16" height="16" aria-hidden="true" >
+                  <use xlink:href="images/sprite.svg#icon-plus">
+                  </use>
+                </svg>
+                </button>
               </a>
-              <button class="catalog-card__btn-like" type="button" aria-label="Добавить в избранное">
-                <svg class="catalog-card__like-icon" width="24" height="22" aria-hidden="true">
+              <button class="catalog-card__btn-like" aria-label="Добавить в избранное" type="button">
+                <svg class="catalog-card__like-icon" aria-hidden="true" width="24" height="22">
                   <use xlink:href="images/sprite.svg#icon-like"></use>
                 </svg>
               </button>
@@ -333,9 +769,15 @@
                     <p class="catalog-card__price-total">910 380 000 ₽</p>
                   </div>
                 </div>
+                <button type="button" class="catalog-card__btn-plus" aria-label="Увеличить">
+                <svg class="catalog-card__btn-plus-icon" width="16" height="16" aria-hidden="true" >
+                  <use xlink:href="images/sprite.svg#icon-plus">
+                  </use>
+                </svg>
+                </button>
               </a>
-              <button class="catalog-card__btn-like" type="button" aria-label="Добавить в избранное">
-                <svg class="catalog-card__like-icon" width="24" height="22" aria-hidden="true">
+              <button class="catalog-card__btn-like" aria-label="Добавить в избранное" type="button">
+                <svg class="catalog-card__like-icon" aria-hidden="true" width="24" height="22">
                   <use xlink:href="images/sprite.svg#icon-like"></use>
                 </svg>
               </button>
