@@ -14,7 +14,7 @@
   <header class="header">
     <div class="container header__container">
       <button class="header__menu" aria-label="Главное меню" type="button">
-        <svg class="header__menu-icon" width="44" height="10">
+        <svg class="header__menu-icon" width="44" height="10" aria-hidden="true">
           <use xlink:href="images/sprite.svg#icon-menu"></use>
         </svg>
 
@@ -25,7 +25,7 @@
           En
         </button>
         <div class="header__counter">
-          <svg class="header__counter-icon" width="22" height="20">
+          <svg class="header__counter-icon" width="22" height="20" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-favorite"></use>
           </svg>
           <span class="header__counter-text">
@@ -39,7 +39,7 @@
     </div>
     <div class="header__choice">
         <button class="header__choice-button" type="button">
-          <svg class="header__choice-icon" width="22" height="18">
+          <svg class="header__choice-icon" width="22" height="18" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-building"></use>
           </svg>
           <span class="header__choice-text">
@@ -47,7 +47,7 @@
           </span>
         </button>
         <button class="header__choice-button" type="button">
-          <svg class="header__choice-icon" width="22" height="18">
+          <svg class="header__choice-icon" width="22" height="18" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-filter"></use>
           </svg>
           <span class="header__choice-text">
@@ -72,7 +72,7 @@
                 <span class="form__reset-btn-text">
                   сбросить
                 </span>
-                <svg class="form__reset-btn-icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="form__reset-btn-icon" width="13" height="13" aria-hidden="true">
                   <use xlink:href="images/sprite.svg#icon-button-close"></use>
                 </svg>
               </button>
@@ -131,7 +131,11 @@
             <div class="form__inner">
               <div class="custom-input">
                   <input class="custom-input__field" id="apartment-number" type="text" name="apartment-number" placeholder="Введите номер">
+                  <svg class="custom-input__icon" width="20" height="20" aria-hidden="true">
+                      <use xlink:href="images/sprite.svg#icon-key"></use>
+                  </svg>
               </div>
+            
             </div>
             
           </fieldset>

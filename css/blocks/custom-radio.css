@@ -17,6 +17,7 @@
     border: 1px solid #AD8361;
     color: #AD8361;
     cursor: pointer;
+    user-select: none;
 }
 
 

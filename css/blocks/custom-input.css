@@ -1,4 +1,5 @@
 .custom-input {
+    position: relative;
     width: 100%;
     height: 25px;
 }
@@ -10,6 +11,10 @@
     border-bottom: 1px solid rgba(9, 9, 9, 0.15);
     outline: none;
     background-color: transparent;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 14px;
+    color: #090909;
 }
 
 .custom-input__field::placeholder   {
@@ -17,4 +22,33 @@
     font-size: 12px;
     line-height: 14px;
     color: rgba(9, 9, 9, 0.5);
+}
+
+.custom-input__icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #AD8361;
+    pointer-events: none;
+}
+
+.custom-input__field:hover {
+    border-color: #AD8361;
+}
+
+.custom-input__field:focus-visible {
+    border-color: #AD8361;
+}
+
+.custom-input__field:disabled   {
+    border-color: rgba(9, 9, 9, 0.1);
+}
+
+.custom-input__field:disabled::placeholder  {
+    color: rgba(9, 9, 9, 0.3);
+}
+
+.custom-input__field:disabled ~ .custom-input__icon {
+    color: rgba(173, 131, 97, 0.5);
 }
