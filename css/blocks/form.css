@@ -72,6 +72,26 @@ color: #090909;
   z-index: 20;
 }
 
+.form__inner-clue::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -7px;
+  width: 10px;
+  height: 10px;
+  background-color: #FFF;
+  transform: rotate(45deg) translateY(-50%);
+}
+
+.form__inner-clue:hover {
+  background-color: #AD8361;
+  color: #FFF;
+}
+
+.form__inner-clue:hover::before {
+  background-color: #AD8361;
+}
+
 .form__inner_currency {
   grid-template-columns: repeat(3, 1fr);
 }
