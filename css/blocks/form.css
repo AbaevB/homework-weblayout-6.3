@@ -37,6 +37,9 @@
 }
 
 .form__group  {
+  margin: 0;
+  padding: 0;
+  border: none;
   margin-bottom: 24px;
   display: flex;
   flex-direction: column;
