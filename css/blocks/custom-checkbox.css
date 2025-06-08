@@ -3,6 +3,10 @@
     
 }
 
+.custom-checkbox__field:checked + .custom-checkbox__label   {
+    color: #090909;
+}
+
 .custom-checkbox__field:checked + .custom-checkbox__label::after    {
     position: absolute;
     left: 3px;
@@ -22,6 +26,7 @@
     align-items: center;
     color: #090909;
     user-select: none;
+    cursor: pointer;
 }
 
 .custom-checkbox__text  {
@@ -40,4 +45,18 @@
     height: 12px;
     border: 1px solid #AD8361;
 }
+
+.custom-checkbox__label:hover,  .custom-checkbox__label:focus-visible  {
+    color: #AD8361;
+}
+
+.custom-checkbox__field:disabled + .custom-checkbox__label  {
+    color: rgba(173, 131, 97, 0.5);
+}
+
+
+.custom-checkbox__field:disabled + .custom-checkbox__label::before   {
+    border-color: rgba(173, 131, 97, 0.5);
+}
+
 
