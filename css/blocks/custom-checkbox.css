@@ -46,7 +46,7 @@
     border: 1px solid #AD8361;
 }
 
-.custom-checkbox__label:hover,  .custom-checkbox__label:focus-visible  {
+.custom-checkbox__field:hover + .custom-checkbox__label,  .custom-checkbox__field:focus-visible + .custom-checkbox__label  {
     color: #AD8361;
 }
 

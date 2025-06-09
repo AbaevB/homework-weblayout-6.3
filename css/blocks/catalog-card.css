@@ -96,6 +96,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100%;
+	outline: none;
 }
 
 .catalog-card__btn-like {
@@ -112,6 +113,7 @@
   border: none;
   border-radius: 0;
 	cursor: pointer;
+	outline: none;
 }
 
 .catalog-card__btn-like:hover	{
@@ -125,13 +127,6 @@
 .catalog-card__btn-like:active {
 	color: #AC8361;
 }
-
-/*.catalog-card__plus {
-	display: none;
-}*/
-
-
-
 
 
 .catalog-card__plus	{
@@ -159,7 +154,7 @@
 	display: flex;
 }
 
-.catalog-card__inner:focus  .catalog-card__plus{
+.catalog-card__inner:focus-visible  .catalog-card__plus{
 	display: flex;
 }
 

@@ -39,6 +39,12 @@
     border: none;
 }
 
+.header__choice-text    {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+}
+
 .header__choice-button_active   {
     background-color: rgba(243, 243, 243, 1);
 }

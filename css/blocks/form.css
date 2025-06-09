@@ -72,6 +72,7 @@ color: #090909;
   font-size: 12px;
   line-height: 14px;
   color: #AD8361;
+  outline: none;
   z-index: 20;
 }
 
@@ -154,7 +155,7 @@ color: #090909;
   line-height: 14px;
   color: #AD8361;
   cursor: pointer;
-
+  outline: none;
 }
 
 .form__btn:hover {
@@ -162,7 +163,7 @@ color: #090909;
   color: #FFF;
 }
 
-.form__btn:focus {
+.form__btn:focus-visible {
   background-color: #AD8361;
   color: #FFF;
 }
